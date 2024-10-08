@@ -1,0 +1,56 @@
+//HW2-1
+#include <iostream>
+using namespace std;
+
+int main() {
+    char fever, cough, tired, hypertension, dryMouth, NightSweats;
+    cout << "歡迎使用本醫療系統，請依序回答。" << endl;
+    cout << "=================================" << endl;
+    
+    std::cout << "請問您最近是否發燒(y/n) =>  ";
+    cin >> fever;
+    if(fever == 'n' || fever =='N'){
+        cout << "先生/小姐您很正常！！！" << endl;
+        return 0;
+    }
+    
+    std::cout << "請問您最近是否咳嗽(y/n) =>  ";
+    cin >> cough;
+    if (cough == 'y' || cough =='Y'){
+        std::cout << "請問您最近是否疲倦(y/n) =>  ";
+        cin >> tired;
+        if (tired == 'y' || tired =='Y'){
+            cout << "先生/小姐您可能得感冒！！！" << endl;
+            return 0;
+        }else{
+            cout << "先生/小姐您可能需要使用其他系統來診斷。" << endl;
+            return 0;
+        }
+    }
+    
+    std::cout << "請問您最近是否血壓高升(y/n) =>  ";
+    cin >> hypertension;
+    if (hypertension == 'y' || hypertension =='Y'){
+        std::cout << "請問您最近是否口乾(y/n) =>  ";
+        cin >> dryMouth;
+        if(dryMouth == 'y' || dryMouth =='Y'){
+            cout << "先生/小姐您可能得肝病！！！" << endl;
+            return 0;
+        }else{
+            cout << "先生/小姐您可能需要使用其他系統來診斷。" << endl;
+            return 0;            
+        }
+    }else{
+        std::cout << "請問您最近是否盜汗(y/n) =>  ";
+        cin >> NightSweats;
+        if(NightSweats == 'y' || NightSweats =='Y'){
+            cout << "先生/小姐您可能得肺病！！！" << endl;
+            return 0;
+        }else{
+            cout << "先生/小姐您可能需要使用其他系統來診斷。" << endl;
+            return 0;            
+        }    
+    }
+    
+    return 0;
+}
